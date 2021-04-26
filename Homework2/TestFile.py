@@ -14,7 +14,7 @@ class linear_regrees_Test(unittest.TestCase):
     	else:
     		raise TypeError("You must use NumPy arrays as inputs.")
 
-    def number_of_observation_test(self):
+    def number_of_obs_test(self):
         if X.shape[0] != y.shape[0]:
             raise CustomError("The number of observations must be equal in both arrays.")
 
