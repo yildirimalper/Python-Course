@@ -100,7 +100,7 @@ def convert_to_64bit_indices(x):
 X = convert_to_64bit_indices(X)
 
 from sklearn.cluster import SpectralClustering
-spectral = SpectralClustering(n_clusters=2, n_components=n_clusters, random_state=44, gamma=1.0, n_neighbors=10)
+spectral = SpectralClustering(n_clusters=2, random_state=44, gamma=1.0, n_neighbors=10)
 spectral.fit(X)
 preds = spectral.predict(X)
 print(spectral.affinity_matrix_)
