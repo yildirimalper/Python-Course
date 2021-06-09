@@ -108,6 +108,6 @@ print(spectral.affinity_matrix_)
 # Gaussian Mixture Model
 from sklearn.mixture import GaussianMixture
 gmm = GaussianMixture(n_components=2)
-gmm_labels = gmm.fit_predict(X)
-proba_lists = gmm.predict_proba(X)
-print(f"The score of Gaussian Mixture model is: {gmm.score(X)}")
+gmm_labels = gmm.fit_predict(X.toarray())
+proba_lists = gmm.predict_proba(X.toarray())
+print(f"The score of Gaussian Mixture model is: {gmm.score(X.toarray())}")
